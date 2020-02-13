@@ -1,1 +1,1 @@
-https://github.com/AntonKurdo/rsschool-cv/cv
+https://github.com/AntonKurdo/rsschool-cv/blob/gh-pages/cv.md
