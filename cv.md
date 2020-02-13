@@ -1,5 +1,6 @@
 # Anton Kurdo
-####Junior-Front-end developer/ trainee
+
+#### Junior-Front-end developer/ trainee
 ----
 
 
@@ -36,3 +37,65 @@ Non-programming education: Master degree in History(BSU, Historical faculty).
 ***English — B2 — Pre-Intermediate***
 
 ___
+
+
+**Code example:**
+
+```JavaScript
+let photoInputEl = findInputEl();
+
+let photosContainerEl = photosContainer();
+
+var imagesUrls = [];
+
+bindEnterClick(photoInputEl, photosContainerEl, imagesUrls);
+restorePhotos(photosContainerEl, imagesUrls);```
+
+```JavaScript
+function findInputEl() {
+   return document.querySelector('.js-new-photo')
+};```
+
+```JavaScript
+function photosContainer() {
+    return document.querySelector('.js-photos')
+}```
+
+```JavaScript
+function bindEnterClick(photoInputEl, photosContainerEl, imagesUrls) {
+    photoInputEl.addEventListener('keyup', (e) => {
+        if (e.code == 'Enter') {
+            //get url
+            var src = photoInputEl.value;
+            //create img with this url as img
+            //create li with this img inside
+            var li = document.createElement('li');
+            li.innerHTML = `<img src = '${src}' />`
+            //append this li to ul
+            photosContainerEl.append(li);
+            //push url to array
+            imagesUrls.push(src);
+            //save to localStorage
+            localStorage.setItem('gallery', JSON.stringify(imagesUrls))
+        }
+    })
+}```
+
+```JavaScript
+function restorePhotos(photosContainerEl, imagesUrls) {
+    let photosStr = localStorage.getItem('gallery');
+    if (!!photosStr) {
+        let photos = JSON.parse(photosStr);
+        photos.forEach((src) => {
+            imagesUrls.push(src);
+            //get url
+            // var src = photoInputEl.value;
+            //create img with this url as img
+            //create li with this img inside
+            var li = document.createElement('li');
+            li.innerHTML = `<img src = '${src}' />`;
+            //append this li to ul
+            photosContainerEl.append(li);
+        });
+    }
+}```
