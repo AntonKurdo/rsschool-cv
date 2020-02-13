@@ -21,3 +21,18 @@
 
 
 ---
+
+**Experience** I have no work experience as developer. Lately I worked as IT-recruiter. 
+
+---
+
+
+**Education** Now I'm attending a Front-end developer course at TeachMeSkills. The course program can be found [here](https://teachmeskills.by/kursy-programmirovaniya/frontend-html-css-javascript-minsk). Also I've done interactive courses at Html-Academy ([link to my profile here](https://htmlacademy.ru/profile/id1166619)).
+
+Non-programming education: Master degree in History(BSU, Historical faculty). 
+
+---
+
+***English — B2 — Pre-Intermediate***
+
+___
