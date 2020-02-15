@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My CV</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Anton Kurdo</h1>
+        <h3 class='subtitle'>Junior-Front-end developer/ trainee</h3>
+        <hr>
+        <div class="photo_container"><img class='cv_photo' src="img/photo.jpg" alt=""></div>
+
+        <br>
+        <br>
+
+        <h4>Contacts:</h4>
+
+
+        <ul>
+            <li> <b>tel: </b> +375 33 614-33-28</li>
+            <li> <b>e-mail: </b> anton.kurdo@gmail.com</li>
+            <li> <b><a href="https://www.linkedin.com/in/anton-kurdo-4b22a311a/">LinkedIn</a></b>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <b>Summary: </b>
+        <p>Current main goal is getting a job as Front-end developer. Also I'm looking for position of trainee
+            to get a job exprerience in programming. Now I'm hardly learning JS, in the neares future I'm going to study
+            React. I have already done 3 studying project in HTML/CSS, some of them You can find at [my github
+            profile](https://github.com/AntonKurdo).</p>
+
+        <br>
+
+        <b>Skills:</b>
+        <p>HTML5, CSS3, JavaScript, Bootstrap, jQuery, Gulp, Git</p>
+
+
+        <br>
+
+        <b>Code example:</b>
+
+        <code>
+            <p>let photoInputEl = findInputEl();</p>
+
+
+            <p>let photosContainerEl = photosContainer();</p>
+
+            <p>var imagesUrls = [];</p>
+
+            <p>bindEnterClick(photoInputEl, photosContainerEl, imagesUrls);
+                restorePhotos(photosContainerEl, imagesUrls);</p>
+
+
+            <p>function findInputEl() {
+                return document.querySelector('.js-new-photo')
+                };</p>
+
+
+            <p>function photosContainer() {
+                return document.querySelector('.js-photos')
+                }</p>
+
+
+            <p>function bindEnterClick(photoInputEl, photosContainerEl, imagesUrls) {
+                photoInputEl.addEventListener('keyup', (e) => {
+                if (e.code == 'Enter') {
+                //get url
+                var src = photoInputEl.value;
+                //create img with this url as img
+                //create li with this img inside
+                var li = document.createElement('li');
+                li.innerHTML = `<>`
+                    //append this li to ul
+                    photosContainerEl.append(li);
+                    //push url to array
+                    imagesUrls.push(src);
+                    //save to localStorage
+                    localStorage.setItem('gallery', JSON.stringify(imagesUrls))
+                    }
+                    })
+                    }</p>
+
+
+            <p>function restorePhotos(photosContainerEl, imagesUrls) {
+                let photosStr = localStorage.getItem('gallery');
+                if (!!photosStr) {
+                let photos = JSON.parse(photosStr);
+                photos.forEach((src) => {
+                imagesUrls.push(src);
+                //get url
+                // var src = photoInputEl.value;
+                //create img with this url as img
+                //create li with this img inside
+                var li = document.createElement('li');
+                li.innerHTML = `<>`;
+                    //append this li to ul
+                    photosContainerEl.append(li);
+                    });
+                    }
+                    }</p>
+        </code>
+
+        <br>
+
+        <b>Experience:</b>
+        <p>I have no work experience as developer. Lately I worked as IT-recruiter.</p>
+
+        <br>
+        <b>Education:</b>
+        <p>Now I'm attending a Front-end developer course at TeachMeSkills. The course program can be found
+            [here](https://teachmeskills.by/kursy-programmirovaniya/frontend-html-css-javascript-minsk). Also I've done
+            interactive courses at Html-Academy ([link to my profile here](https://htmlacademy.ru/profile/id1166619)).
+        </p>
+        <p> Non-programming education: Master degree in History(BSU, Historical faculty).
+        </p>
+        <br>
+
+        <b>English — B2 — Pre-Intermediate</b>
+    </div>
+</body>
+
+</html>
