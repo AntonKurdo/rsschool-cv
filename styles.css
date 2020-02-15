@@ -1,0 +1,22 @@
+
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+  
+}
+
+.title {
+    text-align: center;
+}
+.subtitle {
+    text-align: center;
+}
+
+.cv_photo {
+    width: 150px;
+    
+}
+.photo_container {
+    float: right;
+}
